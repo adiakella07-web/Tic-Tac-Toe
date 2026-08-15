@@ -67,6 +67,8 @@ document.getElementById('reset').addEventListener('click', function() {
     document.getElementById('O').disabled = false;
     document.getElementById('symbol-choice').innerHTML = "Choose Your Symbol:";
     document.getElementById('demo').innerHTML = "";
+    document.getElementById('winner').innerHTML = "";
+
     for (let i = 0; i < 9; i++) {
         document.getElementById('p-' + i).innerHTML = "";
     }
