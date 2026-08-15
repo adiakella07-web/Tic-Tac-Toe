@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
+
+:root {
+    --cyber-red: #ff2a2a;
+    --cyber-cyan: #00f0ff;
+    --cyber-dark: #050608;
+    --cyber-card: #0e1117;
+    --cyber-dim-red: rgba(255, 42, 42, 0.15);
+}
+
+/* ===================================================
+   CYBERPUNK ANIMATED BACKGROUND SYSTEM
+   =================================================== */
+
+body {
+    background-color: var(--cyber-dark);
+    color: var(--cyber-red);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px 10px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* 1. Moving Grid Matrix Layer */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200vw;
+    height: 200vh;
+    background-image: 
+        linear-gradient(to right, rgba(255, 42, 42, 0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 42, 42, 0.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+    z-index: -3;
+    animation: grid-scroll 20s linear infinite;
+}
+
+/* 2. Scanning Laser Scanline Overlay */
+body::after {
+    content: '';
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 240, 255, 0.08) 50%,
+        rgba(0, 240, 255, 0.25) 51%,
+        transparent 55%
+    );
+    z-index: -2;
+    pointer-events: none;
+    animation: scanline-sweep 6s ease-in-out infinite;
+}
+
+
+:root {
+    --cyber-red: #ff2a2a;
+    --cyber-cyan: #00f0ff;
+    --cyber-dark: #050608;
+    --cyber-card: #0e1117;
+    --cyber-dim-red: rgba(255, 42, 42, 0.15);
+}
+
+body {
+    background-color: var(--cyber-dark);
+    /* Subtle scanline background effect */
+    background-image: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.4) 2px,
+        rgba(0, 0, 0, 0.4) 4px
+    );
+    color: var(--cyber-red);
+    font-family: 'Orbitron', sans-serif;
+    font-weight: 400;
+    text-transform: uppercase;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 30px 10px;
+}
+
+/* Header UI */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    letter-spacing: 1px; /* Reduced letter spacing */
+    margin: 0;
+    color: var(--cyber-red);
+    border-bottom: 2px solid var(--cyber-red);
+    padding-bottom: 5px;
+    animation: cyber-glitch 4s infinite linear;
+}
+
+h2, p {
+    font-size: 0.95rem;
+    font-weight: 400;
+    letter-spacing: 0.5px; /* Tighter spacing */
+    color: #fff;
+    text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+/* Centered Symbol Choice Buttons */
+.symbol-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+}
+
+/* Cyberware Slot Style Buttons */
+.symbol-btn, #reset {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--cyber-cyan);
+    background: var(--cyber-card);
+    border: 1px solid var(--cyber-cyan);
+    padding: 10px 25px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 10px, 100% 100%, 10px 100%, 0 calc(100% - 10px));
+    transition: all 0.2s ease-in-out;
+}
+
+.symbol-btn:hover, #reset:hover {
+    background-color: var(--cyber-cyan);
+    color: #000;
+    box-shadow: 0 0 12px var(--cyber-cyan);
+    transform: scale(1.03);
+}
+
+.symbol-btn:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    border-color: #555;
+    color: #888;
+}
+
+/* Container Frame */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 15px;
+    margin-bottom: 35px; /* Generous padding space before Reset button */
+    padding: 15px;
+    background: rgba(14, 17, 23, 0.85);
+    border: 1px solid var(--cyber-red);
+    box-shadow: 0 0 15px var(--cyber-dim-red);
+    position: relative;
+}
+
+.row {
+    display: flex;
+}
+
+/* Grid Cells */
+.cell {
+    width: 90px;
+    height: 90px;
+    background-color: var(--cyber-dim-red);
+    border: 1px solid var(--cyber-red);
+    margin: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.2s ease;
+}
+
+.cell:hover {
+    background-color: rgba(0, 240, 255, 0.1);
+    border-color: var(--cyber-cyan);
+    box-shadow: inset 0 0 10px var(--cyber-cyan);
+}
+
+/* X and O Typography inside slots */
+.cell p {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--cyber-cyan);
+    text-shadow: 0 0 10px var(--cyber-cyan);
+    margin: 0;
+}
+
+/* HUD System Status Text */
+#demo {
+    color: var(--cyber-red);
+    font-size: 1.1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    min-height: 35px;
+    animation: cyber-glitch 3s infinite linear;
+}

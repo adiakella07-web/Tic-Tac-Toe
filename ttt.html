@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+    <title>Tic Tac Toe</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="ttt.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Tic Tac Toe</h1>
+
+    <h2 id="symbol-choice">Choose Your Symbol</h2>
+    <div id="symbol-choice-container">
+        <button class="symbol-btn" id="X" >X</button>
+        <button class="symbol-btn" id="O" >O</button>
+    </div>
+    
+    <p id="demo"></p>
+    <div class="container" id="container">
+        <div class="row">
+            <div class="cell" id="cell-0" data-cell-index="0"><p id="p-0"></p></div>
+            <div class="cell" id="cell-1" data-cell-index="1"> <p id="p-1"></p></div>
+            <div class="cell" id="cell-2" data-cell-index="2"> <p id="p-2"></p></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="cell-3" data-cell-index="3"> <p id="p-3"></p> </div>
+            <div class="cell" id="cell-4" data-cell-index="4"> <p id="p-4"></p></div>
+            <div class="cell" id="cell-5" data-cell-index="5"> <p id="p-5"></p></div>
+        </div>
+        <div class="row">
+            <div class="cell" id="cell-6" data-cell-index="6"> <p id="p-6"></p></div>
+            <div class="cell" id="cell-7" data-cell-index="7"> <p id="p-7"></p></div>
+            <div class="cell" id="cell-8" data-cell-index="8"> <p id="p-8"></p> </div>
+        </div>
+    </div>
+
+    
+    
+    <button class="symbol-btn" id="reset">Reset Game</button>
+
+    <script src="ttt.js"></script>
+</body>
+</html> 
