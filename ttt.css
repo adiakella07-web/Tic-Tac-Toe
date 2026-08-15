@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap');
 
 :root {
     --cyber-red: #ff2a2a;
@@ -93,7 +92,7 @@ body {
 h1 {
     font-size: 2.2rem;
     font-weight: 700;
-    letter-spacing: 1px; /* Reduced letter spacing */
+    letter-spacing: 1px;
     margin: 0;
     color: var(--cyber-red);
     border-bottom: 2px solid var(--cyber-red);
@@ -104,7 +103,7 @@ h1 {
 h2, p {
     font-size: 0.95rem;
     font-weight: 400;
-    letter-spacing: 0.5px; /* Tighter spacing */
+    letter-spacing: 0.5px; 
     color: #fff;
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.4);
 }
@@ -150,7 +149,7 @@ h2, p {
     flex-direction: column;
     align-items: center;
     margin-top: 15px;
-    margin-bottom: 35px; /* Generous padding space before Reset button */
+    margin-bottom: 35px; 
     padding: 15px;
     background: rgba(14, 17, 23, 0.85);
     border: 1px solid var(--cyber-red);
