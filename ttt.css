@@ -203,7 +203,7 @@ h2, p {
 }
 
 /* HUD System Status Text */
-#demo {
+#demo,#winner {
     color: var(--cyber-red);
     font-size: 1.1rem;
     font-weight: 400;

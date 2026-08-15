@@ -45,12 +45,12 @@ function checkWin() {
         const [a, b, c] = winningConditions[i];
         if (board[a] && board[a] === board[b] && board[a] === board[c]) {
             gameActive = false;
-            document.getElementById('demo').innerHTML = currentPlayer + " wins!";
+            document.getElementById('winner').innerHTML = currentPlayer + " wins!";
             document.getElementById('container').disabled = true;
             return;
         }else if (!board.includes("")) {
             gameActive = false;
-            document.getElementById('demo').innerHTML = "It's a draw!";
+            document.getElementById('winner').innerHTML = "It's a draw!";
             document.getElementById('container').disabled = true;
             return;
         }
