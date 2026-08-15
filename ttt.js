@@ -32,9 +32,9 @@ document.getElementById('container').addEventListener('click', function(event) {
         if (board[cellIndex] === "") {
             board[cellIndex] = currentPlayer;
             document.getElementById('p-' + cellIndex).innerHTML = currentPlayer;
-            document.getElementById('demo').innerHTML = "Turn: " + currentPlayer + " played cell " + cellIndex;
             checkWin();
             currentPlayer = currentPlayer === "X" ? "O" : "X";
+            document.getElementById('demo').innerHTML = "Turn: " + currentPlayer;
         }
     }
 });
