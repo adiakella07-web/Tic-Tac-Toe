@@ -49,12 +49,12 @@ function checkWin() {
             document.getElementById('container').disabled = true;
             return;
         }
-        if (!board.includes("")) {
-            gameActive = false;
-            document.getElementById('winner').innerHTML = "It's a draw!";
-            document.getElementById('container').disabled = true;
-            return;
-        }
+    }
+    if (!board.includes("")) {
+        gameActive = false;
+        document.getElementById('winner').innerHTML = "It's a draw!";
+         document.getElementById('container').disabled = true;
+       return;
     }
 }
 
