@@ -2,7 +2,7 @@
 <head>
     <title>Tic Tac Toe</title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="ttt.css">
+    <link rel="stylesheet" href="t.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
@@ -11,11 +11,19 @@
 <body>
     <h1>Tic Tac Toe</h1>
 
+    <h2 id="player-choice">Play Against : </h2>
+    <div id="player-choice-container">
+        <button class="symbol-btn" id="frnd" >Friends</button>
+        <button class="symbol-btn" id="bot" >Bot</button>
+    </div>
+
+
     <h2 id="symbol-choice">Choose Your Symbol</h2>
     <div id="symbol-choice-container">
         <button class="symbol-btn" id="X" >X</button>
         <button class="symbol-btn" id="O" >O</button>
     </div>
+
     
     <p id="demo"></p>
     <p id="winner"></p>
@@ -41,6 +49,6 @@
     
     <button class="symbol-btn" id="reset">Reset Game</button>
 
-    <script src="ttt.js"></script>
+    <script src="t.js"></script>
 </body>
 </html> 

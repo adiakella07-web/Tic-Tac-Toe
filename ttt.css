@@ -190,7 +190,7 @@ h2, p {
 }
 
 /* HUD System Status Text */
-#demo,#winner {
+#demo,#winner,#player-choice,#symbol-choice {
     color: var(--cyber-red);
     font-size: 1.1rem;
     font-weight: 400;
